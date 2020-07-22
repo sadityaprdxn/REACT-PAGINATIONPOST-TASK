@@ -61,6 +61,8 @@ const Userposts = () => {
         })
     }, []);
 
+    useEffect(() => { changePageNo(params.pageno); });
+
     const paginate = (page) => {
         history.push(`/${page}`);
         changePageNo(page);

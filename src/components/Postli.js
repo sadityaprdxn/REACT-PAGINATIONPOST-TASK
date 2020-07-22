@@ -19,7 +19,7 @@ const Postli = ({title, id}) => {
         debugger;
         if(user.isLogin) {
             history.push(`${history.location.pathname}/post/${postid}`)
-        }else {
+        } else {
             history.push(`/login/user`);
         }
     }
