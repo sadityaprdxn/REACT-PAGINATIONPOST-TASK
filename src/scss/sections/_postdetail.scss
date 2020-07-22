@@ -1,0 +1,27 @@
+.post-detail {
+    padding: 60px 0;
+    background-color: rgb(238, 250, 255);
+
+    .wrapper { width: 50%; }
+
+    h3 {
+        padding-bottom: 20px;
+        @include textcharacteristics($primaryColor, 15px, 800, uppercase);
+    }
+
+    p {
+        padding-bottom: 20px;
+        @include textcharacteristics($primaryColor, 15px, 800, uppercase);
+    }
+
+    span {
+        padding-bottom: 20px;
+        display: block;
+        @include textcharacteristics($primaryColor, 15px, 800, uppercase);
+    }
+
+    img {
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+}

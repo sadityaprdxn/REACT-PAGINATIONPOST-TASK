@@ -1,0 +1,64 @@
+.user-posts {
+    padding: 30px 0;
+    background-color: rgb(238, 250, 255);
+
+    h2 {
+        padding-bottom: 30px;
+        @include textcharacteristics($primaryColor, 25px, 800, uppercase);
+        text-align: center;
+    }
+
+    .posts-list {
+        li {
+            width: 100%;
+            padding: 20px;
+            margin: 10px 0;
+            border-bottom-left-radius: 20px;
+            border-top-right-radius: 20px;
+            @include flex(wrap, row, flex-start, center, center);
+            box-sizing: border-box;
+            background-color: $secondaryColor;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                background-color: transparentize($secondaryColor, 0.4);
+            }
+        }
+
+        figure {
+            width: 60px;
+
+            img {
+                border-bottom-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+        }
+
+        h3 {
+            padding-left: 10px;
+            @include textcharacteristics($primaryColor, 15px, 800, uppercase);
+        }
+    }
+
+    .pagination-list {
+        text-align: center;
+        @include flex(nowrap, row, center, center, center);
+
+        li {
+            width: 30px;
+            height: 30px;
+            margin: 2px;
+            @include flex(nowrap, row, center, center, center);
+            background-color: $primaryColor;
+            color: $white;
+            cursor: pointer;
+
+            &:hover,
+            &.active {
+                background-color: $secondaryColor;
+                color: $primaryColor;
+            }
+        }
+    }
+}
