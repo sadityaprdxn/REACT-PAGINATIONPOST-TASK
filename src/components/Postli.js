@@ -13,10 +13,8 @@ const Postli = ({title, id}) => {
 
     const user = useContext(userContext);
     const history = useHistory();
-    console.log(history);
 
     const checkLogin = (postid) => {
-        debugger;
         if(user.isLogin) {
             history.push(`${history.location.pathname}/post/${postid}`)
         } else {

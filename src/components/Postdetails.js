@@ -57,13 +57,11 @@ const Postdetails = () => {
     return (
         <section className="post-detail">
             <div className="wrapper">
-            {
-                state.data.loading ? 
-                ( <h3>loading</h3> ) :
+            { state.loading && ( <h3>loading</h3> ) }
 
-                state.data.isError ? 
-                ( <h3>error</h3> ) :
+            { state.isError && ( <h3>error</h3> ) }
 
+            { Object.keys(state.data).length !== 0 &&    
                 (
                     <>
                     <h3>title : {state.data.title}</h3>

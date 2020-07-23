@@ -43,8 +43,6 @@ const Userposts = () => {
     const [state, dispatch] = useReducer(userDataReducer, initialstate);
     const [pageNo, changePageNo] = useState(params.pageno);
 
-    console.log(pageNo);
-
     useEffect(() => {
         
         axios.get('https://jsonplaceholder.typicode.com/posts')
@@ -73,14 +71,12 @@ const Userposts = () => {
           <div className="wrapper">
             <h2>users posts</h2>
             <ul className="posts-list">
-                {
-                    state.loading ?
-                    (<li className="loading"><h3>loading</h3></li>) :
 
-                    state.isError ? 
-                    (<li className="error"><h3>error</h3></li>) :
+                { state.loading && (<li className="loading"><h3>loading</h3></li>) }
 
-                    state.data.map(({id, title}, index) => {
+                { state.isError && (<li className="error"><h3>error</h3></li>) }
+
+                { state.data.map(({id, title}, index) => {
                         if(index < parseInt(pageNo)*10 && index >=  (parseInt(pageNo)*10)-10 && index < state.data.length ) {     
                         return (
                             <Postli
