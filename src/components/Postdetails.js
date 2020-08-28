@@ -1,8 +1,6 @@
 import React, { useEffect, useReducer } from 'react';
 import axios from 'axios';
-import {
-  useParams
-} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import {userContext} from './App';
 
 

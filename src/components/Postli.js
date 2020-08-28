@@ -6,7 +6,6 @@ import {
   Redirect,
   useHistory
 } from 'react-router-dom';
-
 import {userContext} from './App'
 
 const Postli = ({title, id}) => {
@@ -27,7 +26,7 @@ const Postli = ({title, id}) => {
         <li onClick={() => checkLogin(id)}>
             <figure>
                 <img src="https://via.placeholder.com/150" alt="user post images"/>
-            </figure>                    
+            </figure>              
             <h3>{title}</h3>
         </li>
     );
